@@ -4,7 +4,12 @@
 Build a machine learning model to predict IMDb movie ratings based on metadata like genre, director, actors, duration, and more.
 
 ---
+## 🌐 Live Demo
 
+The project is deployed and live!  
+👉 **[Click here to use the IMDb Movie Rating Predictor](https://movies-rating.streamlit.app/)**  
+
+---
 ## 🛠️ Features Used
 - Year of release
 - Duration (in minutes)
