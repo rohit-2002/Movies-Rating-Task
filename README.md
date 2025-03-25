@@ -1,17 +1,56 @@
-# 🎬 IMDb Movie Rating Predictor (India)
+# 🎬 IMDb Movie Rating Predictor
 
-## 📌 Task Objective
-Build a machine learning model to predict IMDb movie ratings for Indian movies using metadata such as genre, duration, cast, and more.
+## 📌 Objective
+Build a machine learning model to predict IMDb movie ratings based on metadata like genre, director, actors, duration, and more.
 
-## 🧠 Approach
-- Clean and preprocess the movie metadata.
-- Engineer meaningful features (e.g., director/genre average rating, frequency encoding).
-- Train a **Random Forest Regressor** model.
-- Evaluate using MAE, RMSE, and R².
+---
+
+## 🛠️ Features Used
+- Year of release
+- Duration (in minutes)
+- Number of votes
+- Director's average rating
+- Genre’s average rating
+- Frequency of appearance of director, genre, actors
+
+---
+
+## 🧹 Preprocessing
+- Removed rows with missing `Rating`, `Genre`, `Director`, etc.
+- Extracted numeric values from `Year`, `Duration`
+- Cleaned commas from `Votes` and converted to int
+- Feature engineered average ratings and frequencies
+
+---
+
+## 📈 Model Used
+- **RandomForestRegressor** from scikit-learn
+- Evaluation Metrics:
+  - **MAE**: `x.xxx`
+  - **RMSE**: `x.xxx`
+  - **R²**: `x.xxx`
+
+---
 
 ## 🚀 How to Run
+1. Install dependencies:  
+   `pip install -r requirements.txt`
+2. Train model:  
+   `python train_model.py`
+3. Launch app:  
+   `streamlit run app.py`
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/rohit-2002/Movies-Rating-Task.git
-cd Movies Rating Task
+---
+
+## 📂 Files
+- `IMDb Movies India.csv` – Raw dataset
+- `train_model.py` – Model training script
+- `model.pkl` – Trained model
+- `features.pkl` – Features used in training
+- `app.py` – Streamlit app UI
+- `README.md` – Project documentation
+
+---
+
+## 📊 Output
+User can select movie details and get predicted IMDb rating instantly via an interactive Streamlit UI.
